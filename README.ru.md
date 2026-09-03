@@ -46,15 +46,23 @@ MNPL — это развернутая в продакшене экономич�
 
 | 1. Главный экран | 2. Инвентарь и коллекции |
 | :---: | :---: |
-| ![Главный экран](assets/screenshots/01_home_screen.png)<br>*Балансы игрока, индикатор энергии и основная навигация* | ![Инвентарь](assets/screenshots/02_inventory_cards.png)<br>*Галерея коллекционных карт с фильтрами редкости и статами* |
+| <img src="assets/screenshots/HomePage.jpg" width="360" alt="Главный экран" /><br>*Балансы игрока, индикатор энергии и основной геймплей* | <img src="assets/screenshots/InventoryPage.jpg" width="360" alt="Инвентарь" /><br>*Галерея коллекционных карт с фильтрами редкости* |
 
 | 3. Недвижимость V2 | 4. P2P Маркетплейс |
 | :---: | :---: |
-| ![Недвижимость](assets/screenshots/03_real_estate.png)<br>*Карта районов, покупка участков и уровни улучшений* | ![Маркетплейс](assets/screenshots/04_marketplace.png)<br>*Пользовательская доска объявлений и активные ордера* |
+| <img src="assets/screenshots/RealityPage.jpg" width="360" alt="Недвижимость V2" /><br>*Карта районов, покупка участков и уровни улучшений* | <img src="assets/screenshots/MarketPage.jpg" width="360" alt="Маркетплейс" /><br>*Пользовательская доска объявлений и активные ордера* |
 
-| 5. Лидерборд | 6. Профиль и настройки |
+| 5. Детализация карточки | 6. Лидерборд |
 | :---: | :---: |
-| ![Лидерборд](assets/screenshots/05_leaderboard.png)<br>*Глобальный рейтинг игроков по капиталу и активности* | ![Профиль](assets/screenshots/06_profile_settings.png)<br>*Игровая статистика, реферальная программа и выбор языка* |
+| <img src="assets/screenshots/CardPage.jpg" width="360" alt="Карточка" /><br>*Характеристики карты и требования для слияния* | <img src="assets/screenshots/TopPage.jpg" width="360" alt="Лидерборд" /><br>*Глобальный рейтинг игроков по капиталу и активности* |
+
+| 7. Реферальная система | 8. Задания и квесты |
+| :---: | :---: |
+| <img src="assets/screenshots/ReferralPage.jpg" width="360" alt="Реферальная система" /><br>*Статистика рефералов и приглашение друзей* | <img src="assets/screenshots/TasksPage.jpg" width="360" alt="Задания" /><br>*Ежедневные квесты и награды за активность* |
+
+| 9. Ежедневные бонусы | 10. Профиль и настройки |
+| :---: | :---: |
+| <img src="assets/screenshots/BonusPage.jpg" width="360" alt="Бонусы" /><br>*Календарь наград за регулярный вход в игру* | <img src="assets/screenshots/OtherPage.jpg" width="360" alt="Профиль и настройки" /><br>*Обзор аккаунта, системное меню и выбор языка* |
 
 ---
 

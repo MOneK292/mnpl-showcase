@@ -44,17 +44,25 @@ MNPL is a production-deployed economic strategy game running inside Telegram via
 
 *Captures from the production Telegram Mini App.*
 
-| 1. Home Dashboard | 2. Inventory & Collectibles |
+| 1. Home Dashboard | 2. Inventory & Cards |
 | :---: | :---: |
-| ![Home Dashboard](assets/screenshots/01_home_screen.png)<br>*Player balances, energy indicator, and core navigation* | ![Inventory](assets/screenshots/02_inventory_cards.png)<br>*Card collection gallery with rarity filters and stats* |
+| <img src="assets/screenshots/HomePage.jpg" width="360" alt="Home Dashboard" /><br>*Player balances, energy indicator, and core gameplay* | <img src="assets/screenshots/InventoryPage.jpg" width="360" alt="Inventory" /><br>*Card collection gallery with rarity filters and stats* |
 
 | 3. Real Estate V2 | 4. P2P Marketplace |
 | :---: | :---: |
-| ![Real Estate](assets/screenshots/03_real_estate.png)<br>*District exploration, property acquisition, and upgrades* | ![Marketplace](assets/screenshots/04_marketplace.png)<br>*Decentralized player trading board and active orders* |
+| <img src="assets/screenshots/RealityPage.jpg" width="360" alt="Real Estate V2" /><br>*District exploration, property acquisition, and upgrades* | <img src="assets/screenshots/MarketPage.jpg" width="360" alt="Marketplace" /><br>*Decentralized player trading board and active orders* |
 
-| 5. Leaderboard | 6. Profile & Settings |
+| 5. Card Detail & Upgrades | 6. Leaderboard |
 | :---: | :---: |
-| ![Leaderboard](assets/screenshots/05_leaderboard.png)<br>*Global player ranking by net worth and active streaks* | ![Profile](assets/screenshots/06_profile_settings.png)<br>*User account statistics, referral links, and language toggles* |
+| <img src="assets/screenshots/CardPage.jpg" width="360" alt="Card Detail" /><br>*Collectible card attributes and fusion requirements* | <img src="assets/screenshots/TopPage.jpg" width="360" alt="Leaderboard" /><br>*Global player ranking by net worth and active streaks* |
+
+| 7. Referral Program | 8. Quests & Tasks |
+| :---: | :---: |
+| <img src="assets/screenshots/ReferralPage.jpg" width="360" alt="Referral Program" /><br>*Referral network statistics and friend invite tracking* | <img src="assets/screenshots/TasksPage.jpg" width="360" alt="Tasks" /><br>*Daily quest system and player reward progression* |
+
+| 9. Daily Bonuses | 10. Profile & Settings |
+| :---: | :---: |
+| <img src="assets/screenshots/BonusPage.jpg" width="360" alt="Daily Bonuses" /><br>*Consecutive check-in rewards calendar* | <img src="assets/screenshots/OtherPage.jpg" width="360" alt="Profile & Settings" /><br>*Account overview, navigation menu, and language toggles* |
 
 ---
 
