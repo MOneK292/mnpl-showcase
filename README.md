@@ -1,180 +1,178 @@
-﻿# MNPL — Economic Strategy Telegram Mini App
+﻿# MNPL — Экономическая стратегия (Telegram Mini App)
 
-[English](README.md) | [Русский](README.ru.md)
+[Русский](README.md) | [English](README.en.md)
 
-> **An economic strategy game built as a Telegram Mini App with an asynchronous FastAPI backend, Aiogram bot, and PostgreSQL.**
+> **Экономическая игра, реализованная как Telegram Mini App с асинхронным бэкендом на FastAPI, ботом на Aiogram и базой данных PostgreSQL.**
 
 [![Frontend: Vue 3](https://img.shields.io/badge/Frontend-Vue%203%20%7C%20TypeScript%20%7C%20Vite-4FC08D?logo=vuedotjs)](https://vuejs.org/)
 [![Backend: FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%7C%20Python%203.11-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Bot: Aiogram 3](https://img.shields.io/badge/Bot-Aiogram%203-2CA5E0?logo=telegram)](https://aiogram.dev/)
 [![Database: PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL%20%7C%20asyncpg-336791?logo=postgresql)](https://www.postgresql.org/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red)](#license)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red)](#лицензия)
 
 ---
 
-## Project Overview
+## О проекте
 
-MNPL is a production-deployed economic strategy game running inside Telegram via the Telegram Mini Apps platform. Players manage virtual real estate districts, collect and upgrade cards, trade on a peer-to-peer marketplace, and receive automated daily passive yields.
+MNPL — это развернутая в продакшене экономическая стратегия, работающая напрямую внутри Telegram на платформе Telegram Mini Apps. Игроки развивают виртуальные районы недвижимости, собирают и улучшают коллекционные карточки, торгуют на P2P-маркете и ежедневно получают автоматический пассивный доход.
 
-* **~1,000** Registered Users
-* **~100** Monthly Active Users (MAU)
-* **~50** Daily Active Users (DAU)
-* **Production Deployment**: Running on a single Linux VPS with automated background task scheduling
-* **Platform**: Telegram WebApp (Mobile & Desktop)
-
----
-
-## Links
-
-- **Telegram Community**: https://t.me/mnplcoin
-- **Telegram Bot**: https://t.me/mnplgamebot
----
-
-## Engineering Highlights
-
-- **Built 68 Vue components and 33 SPA routes** from scratch for the Telegram Mini App
-- **Expanded backend to 52 REST endpoints** in FastAPI to support client-side gameplay
-- **Implemented concurrency-safe asset allocation and balance operations** using PostgreSQL row-level locking
-- **Implemented bilingual localization architecture** (RU/EN) across client and server
-- **Developed custom Telegram WebView navigation** and container-specific scroll restoration
+* **~1,000** зарегистрированных пользователей
+* **~100** активных пользователей в месяц (MAU)
+* **~50** активных пользователей в день (DAU)
+* **Продакшен-деплой**: работает на выделенном Linux VPS с автоматическим выполнением фоновых задач
+* **Платформа**: Telegram WebApp (мобильная и десктопная версии)
 
 ---
 
-## Screenshots & Interface
+## Ссылки
 
-*Captures from the production Telegram Mini App.*
+- **Telegram-сообщество**: https://t.me/mnplcoin
+- **Telegram-бот**: https://t.me/mnplgamebot
+---
 
-| 1. Home Dashboard | 2. Inventory & Cards |
+## Ключевые инженерные результаты (Highlights)
+
+- **Разработал с нуля 68 Vue-компонентов и 33 SPA-маршрута** для Telegram Mini App
+- **Расширил бэкенд до 52 REST-эндпоинтов** на FastAPI для поддержки клиентского интерфейса
+- **Реализовал безопасное распределение активов и балансовых операций** с защитой от гонок через построчные блокировки PostgreSQL
+- **Спроектировал архитектуру полной локализации** (RU/EN) на клиенте и сервере
+- **Реализовал кастомную навигацию и постраничное сохранение скролла** с учетом специфики Telegram WebView
+
+---
+
+## Скриншоты интерфейса
+
+*Интерфейс боевой версии Telegram Mini App.*
+
+| 1. Главный экран | 2. Инвентарь и коллекции |
 | :---: | :---: |
-| <img src="assets/screenshots/HomePage.jpg" width="360" alt="Home Dashboard" /><br>*Player balances, energy indicator, and core gameplay* | <img src="assets/screenshots/InventoryPage.jpg" width="360" alt="Inventory" /><br>*Card collection gallery with rarity filters and stats* |
+| <img src="assets/screenshots/HomePage.jpg" width="360" alt="Главный экран" /><br>*Балансы игрока, индикатор энергии и основной геймплей* | <img src="assets/screenshots/InventoryPage.jpg" width="360" alt="Инвентарь" /><br>*Галерея коллекционных карт с фильтрами редкости* |
 
-| 3. Real Estate V2 | 4. P2P Marketplace |
+| 3. Недвижимость V2 | 4. P2P Маркетплейс |
 | :---: | :---: |
-| <img src="assets/screenshots/RealityPage.jpg" width="360" alt="Real Estate V2" /><br>*District exploration, property acquisition, and upgrades* | <img src="assets/screenshots/MarketPage.jpg" width="360" alt="Marketplace" /><br>*Decentralized player trading board and active orders* |
+| <img src="assets/screenshots/RealityPage.jpg" width="360" alt="Недвижимость V2" /><br>*Карта районов, покупка участков и уровни улучшений* | <img src="assets/screenshots/MarketPage.jpg" width="360" alt="Маркетплейс" /><br>*Пользовательская доска объявлений и активные ордера* |
 
-| 5. Card Detail & Upgrades | 6. Leaderboard |
+| 5. Детализация карточки | 6. Лидерборд |
 | :---: | :---: |
-| <img src="assets/screenshots/CardPage.jpg" width="360" alt="Card Detail" /><br>*Collectible card attributes and fusion requirements* | <img src="assets/screenshots/TopPage.jpg" width="360" alt="Leaderboard" /><br>*Global player ranking by net worth and active streaks* |
+| <img src="assets/screenshots/CardPage.jpg" width="360" alt="Карточка" /><br>*Характеристики карты и требования для слияния* | <img src="assets/screenshots/TopPage.jpg" width="360" alt="Лидерборд" /><br>*Глобальный рейтинг игроков по капиталу и активности* |
 
-| 7. Referral Program | 8. Quests & Tasks |
+| 7. Реферальная система | 8. Задания и квесты |
 | :---: | :---: |
-| <img src="assets/screenshots/ReferralPage.jpg" width="360" alt="Referral Program" /><br>*Referral network statistics and friend invite tracking* | <img src="assets/screenshots/TasksPage.jpg" width="360" alt="Tasks" /><br>*Daily quest system and player reward progression* |
+| <img src="assets/screenshots/ReferralPage.jpg" width="360" alt="Реферальная система" /><br>*Статистика рефералов и приглашение друзей* | <img src="assets/screenshots/TasksPage.jpg" width="360" alt="Задания" /><br>*Ежедневные квесты и награды за активность* |
 
-| 9. Daily Bonuses | 10. Profile & Settings |
+| 9. Ежедневные бонусы | 10. Профиль и настройки |
 | :---: | :---: |
-| <img src="assets/screenshots/BonusPage.jpg" width="360" alt="Daily Bonuses" /><br>*Consecutive check-in rewards calendar* | <img src="assets/screenshots/OtherPage.jpg" width="360" alt="Profile & Settings" /><br>*Account overview, navigation menu, and language toggles* |
+| <img src="assets/screenshots/BonusPage.jpg" width="360" alt="Бонусы" /><br>*Календарь наград за регулярный вход в игру* | <img src="assets/screenshots/OtherPage.jpg" width="360" alt="Профиль и настройки" /><br>*Обзор аккаунта, системное меню и выбор языка* |
 
 ---
 
-## Features
+## Игровой функционал
 
-### 1. Collectible Asset & Upgrade System
-* Visual catalog of collectible cards organized into thematic series and rarity tiers.
-* Multi-card fusion algorithm: combining 5 duplicate cards into higher-tier editions with boosted attributes.
-* Card recycling mechanic: converting surplus assets into premium hard currency.
+### 1. Коллекционные карточки и система улучшений
+* Визуальный каталог карт по тематическим сериям и уровням редкости.
+* Алгоритм слияния: объединение 5 одинаковых карт в старшую ступень с повышенными характеристиками.
+* Механика сжигания (утилизации): обмен карт на премиальную валюту (кристаллы).
 
-### 2. Dynamic Real Estate & Districts (Realty V2)
-* District-based property ownership with progression incentives.
-* Completion multiplier: owning entire district sets increases total passive yield.
-* Structural upgrades: building residential houses on acquired parcels to scale rental returns.
+### 2. Недвижимость и районы (Realty V2)
+* Районная система владения объектами с мотивацией сбора полных сетов.
+* Множитель района: сбор всех объектов локации увеличивает суммарный пассивный доход.
+* Постройка домов на выкупленных участках для масштабирования арендной доходности.
 
-### 3. P2P Marketplace & Trading
-* Player-to-player order book for buying and selling rare collectible cards.
-* In-game store for functional utility items and progression boosts.
-* Database-level atomic transactions for item and currency transfers to prevent partial state updates.
+### 3. P2P Маркетплейс и магазин
+* Пользовательская книга заявок на покупку и продажу редких карт.
+* Внутриигровой магазин с расходными предметами и бустерами.
+* Атомарные транзакции на уровне базы данных для исключения частичного перевода активов.
 
-### 4. Automated Daily Yield & Economy
-* Automated background scheduler calculating daily payouts based on portfolio size and active holdings.
-* Automated daily yield adjustment based on scheduled token valuation calculations.
+### 4. Автоматический пассивный доход
+* Фоновое начисление дохода раз в сутки по расписанию в зависимости от активов игрока.
+* Автоматическая корректировка ежедневных выплат на основе рыночной оценки токена.
 
-### 5. Multilingual Support (i18n)
-* Complete localization for English and Russian across all UI flows, dialogs, and notifications.
-* Language preference synchronization across frontend client and backend profile storage.
+### 5. Мультиязычность (i18n)
+* Полная локализация интерфейса, диалогов и уведомлений на русский и английский языки.
+* Синхронизация выбранного языка между клиентом и профилем на сервере.
 
-### 6. Gamification & Retention
-* Consecutive daily check-in calendar with escalating rewards.
-* Interactive lucky roulette spin with randomized drop tables.
-* Milestone achievement system rewarding gameplay progression.
-
----
-
-## My Role
-
-> **"Joined the project when core gameplay existed exclusively as Telegram Bot chat interactions."**
-
-### Pre-existing Project Baseline (What was already there)
-* Initial Telegram Bot service on Aiogram
-* Baseline PostgreSQL schema (user entities, basic dice logic, initial balance ledger)
-* Interaction loop conducted via Telegram inline keyboards and chat replies
-
-### My Direct Contributions (What I designed and built)
-* **Telegram Mini App (0 → 1)**: Conceived, architected, and built the entire Vue 3 SPA client from scratch
-* **Frontend Application**: Delivered all 68 Vue components, 33 SPA routes, and mobile-first touch UI
-* **Backend Modernization**: Expanded the backend into a 52-endpoint FastAPI REST service to serve the SPA
-* **Game Mechanics V2**: Engineered the Card Upgrade/Fusion algorithm, Card Burning, and Realty V2 mechanics
-* **Database Evolution**: Authored PostgreSQL migrations (001–007), adding row locks and query indexes
-* **Full Localization**: Designed and implemented end-to-end bilingual support (RU/EN) across client and API
-* **WebView UX Engineering**: Resolved Telegram-specific touch scroll clipping and route state preservation
+### 6. Удержание и геймификация
+* Календарь ежедневных наград за регулярный вход в игру.
+* Интерактивная рулетка с вероятностным распределением призов.
+* Многоуровневые достижения за торговлю, крафт и коллекционирование.
 
 ---
 
-## My Impact
+## Моя роль в проекте
 
-* **Shifted Core UX from Bot to WebApp**: Transformed deep nested chat menus into an intuitive dashboard, eliminating message rate-limit delays during active gameplay.
-* **Decoupled Client & Server Workloads**: Moving interactive gameplay to a dedicated REST service allowed concurrent users to browse inventory and trade without saturating the bot polling loop.
-* **Shipped Bilingual Support (RU/EN)**: Built an end-to-end localization architecture across client and server, enabling international user onboarding.
-* **Delivered Core Retention Loops (Realty V2 & Fusion)**: Implemented multi-tier card upgrades and progressive real estate mechanics, providing long-term progression goals for daily players.
-* **Eliminated Race Conditions in Trades**: Applied row-level locking (`SELECT ... FOR UPDATE`) in critical purchase and fusion operations, preventing double-spending and inventory discrepancies.
-* **Resolved Mobile WebView Quirks**: Implemented container-targeted scroll restoration and local caching to eliminate UI flickers and page resets inside Telegram's embedded browser.
+> **"Подключился к проекту, когда весь геймплей был реализован исключительно в формате чат-бота Telegram."**
 
----
+### Исходное состояние проекта (что уже было):
+* Работающий Telegram-бот на базе Aiogram;
+* Базовая схема PostgreSQL (пользователи, логика бросков кубика, начальные балансы);
+* Игровой процесс через inline-кнопки и текстовые сообщения в чате.
 
-## Technical Decisions
-
-### Why asyncpg instead of SQLAlchemy?
-* **Explicit SQL Control**: Complex game calculations (progressive yields, multi-table condition checks, and district bonuses) are significantly clearer and easier to tune in raw, parameterized SQL.
-* **Targeted Locking**: Critical trading operations required explicit `FOR UPDATE` row locks to prevent race conditions during card exchanges. Writing these directly in SQL avoids ORM abstraction overhead and unexpected query generation.
-* **Minimal Latency**: Connecting directly via an `asyncpg.Pool` eliminates ORM serialization layers, keeping request overhead low on single-node hardware.
-
-### Why Vue Composables instead of Pinia?
-* **Bundle Size Optimization**: In a mobile Telegram Mini App, initial loading speed is critical. Avoiding extra store libraries kept the bundle lightweight.
-* **Feature-Scoped State**: Game state naturally splits into independent domains (user session, inventory, market, tasks). Encapsulating state in composables with a lightweight `localStorage` TTL cache provided sufficient reactivity without centralized store boilerplate.
-
-### Why a Telegram Mini App instead of continuing with Bot UI?
-* **Telegram Bot Limitations**: Complex inventory management with dozens of cards and multi-tier properties requires extensive scrolling and pagination in chat messages, hitting Telegram API rate limits during quick taps.
-* **Rich Interactions**: Mini Apps provide visual asset grids, animated dialogs, instant tab transitions, and touch gestures that are fundamentally impossible in text-based chats.
-
-### Why a separate REST API alongside the Bot?
-* **Decoupling Responsibilities**: The Telegram Bot continues to handle user onboarding, command parsing, and system alerts via long polling. The FastAPI REST service handles high-frequency HTTP requests from the Mini App.
-* **Shared Persistence**: Both services connect to the same PostgreSQL database, ensuring unified progression whether an action originates in chat or inside the WebApp.
+### Мой личный вклад (что спроектировал и создал я):
+* **Telegram Mini App (с нуля)**: спроектировал и с нуля разработал клиентское SPA-приложение на Vue 3, переведя игру в полноценный мобильный интерфейс;
+* **Фронтенд**: реализовал 68 компонентов, 33 маршрута и адаптивную верстку;
+* **Модернизация бэкенда**: расширил существующий API до 52 REST-эндпоинтов на FastAPI для работы SPA;
+* **Новые механики (V2)**: разработал алгоритмы слияния и сжигания карт, систему недвижимости Realty V2;
+* **Эволюция базы данных**: написал миграции PostgreSQL (001–007), внедрил блокировки строк и индексы;
+* **Интернационализация**: реализовал сквозную двуязычную поддержку (RU/EN) на клиенте и сервере;
+* **Оптимизация WebView**: устранил проблемы со скроллом и сохранением состояния экрана при навигации в Telegram.
 
 ---
 
-## Architecture
+## Мое влияние на продукт (My Impact)
 
-High-level architecture illustrating the separation between client layers, backend services, and persistence:
+* **Перевод UX из чата в WebApp**: устранил задержки и ограничения Telegram Bot API (HTTP 429), заменив длинные цепочки кнопок на удобный графический дашборд.
+* **Разделение клиентских и серверных нагрузок**: вынесение частых действий в отдельный REST-сервис позволило игрокам активно просматривать инвентарь и маркет без перегрузки поллинга бота.
+* **Выход на международную аудиторию**: полноценная поддержка английского и русского языков открыла доступ к зарубежным игрокам.
+* **Внедрение долгосрочных игровых циклов**: запуск Realty V2 и слияния карт сформировал мотивацию для регулярного ежедневного входа.
+* **Надежность транзакций**: применение блокировок строк (`FOR UPDATE SKIP LOCKED`) в критических операциях исключило возможность повторного списания или дублирования карт при одновременных кликах.
+* **Плавная работа в мобильном WebView**: специализированное кэширование и фиксация скролла по конкретным контейнерам обеспечили поведение нативного мобильного приложения.
+
+---
+
+## Архитектурные решения (Technical Decisions)
+
+### Почему asyncpg вместо SQLAlchemy?
+* **Прямой контроль SQL**: сложные игровые расчеты (прогрессивный доход, множественные условия наборов) значительно прозрачнее и проще оптимизировать на чистом параметризованном SQL.
+* **Точечные блокировки**: для операций начисления дропов и списания балансов требовались явные блокировки строк (`FOR UPDATE`), что проще и надежнее контролировать без абстракций ORM.
+* **Минимальный оверхед**: прямое подключение через пул `asyncpg` обеспечивает минимальные задержки без накладных расходов на сериализацию моделей.
+
+### Почему Vue Composables вместо Pinia?
+* **Экономия размера бандла**: для мобильного Mini App критична скорость первоначальной загрузки, отказ от внешней библиотеки стейт-менеджмента помог облегчить приложение.
+* **Изолированное состояние**: игровое состояние разделено по доменам (сессия, инвентарь, маркет, задачи); композиции с локальным TTL-кэшированием в `localStorage` закрыли все потребности реактивности.
+
+### Почему Telegram Mini App вместо Bot UI?
+* **Ограничения чат-ботов**: отображение десятков карт и многоуровневых параметров в сообщениях чата приводило к спаму кнопками и упиралось в лимиты Telegram API.
+* **Богатый интерфейс**: веб-приложение дает визуальную сетку карточек, диалоговые окна, мгновенное переключение вкладок и тач-управление.
+
+### Почему отдельный REST API рядом с ботом?
+* **Разделение ответственности**: бот обрабатывает входящие команды, авторизацию и системные алерты, а FastAPI обслуживает частые HTTP-запросы от веб-приложения.
+* **Единая база данных**: оба сервиса подключены к общей базе PostgreSQL, сохраняя синхронность профиля независимо от точки входа.
+
+---
+
+## Архитектура системы
 
 ```mermaid
 flowchart TD
-    subgraph Clients["Client Layer"]
-        TgUser["Telegram User"]
+    subgraph Clients["Клиентский слой"]
+        TgUser["Пользователь Telegram"]
         MiniApp["Telegram Mini App (Vue 3 + Vite SPA)"]
-        TgBotClient["Telegram Bot Chat Interface"]
+        TgBotClient["Интерфейс Telegram-бота"]
     end
 
-    subgraph Gateway["Gateway & Reverse Proxy"]
+    subgraph Gateway["Шлюз и прокси"]
         Nginx["Nginx Reverse Proxy & SSL"]
     end
 
-    subgraph Services["Application Services"]
-        FastAPI["FastAPI REST Backend (52 Endpoints)"]
-        BotService["Aiogram 3 Bot Service & Admin Daemon"]
-        Scheduler["Automated Daily Schedulers & Workers"]
+    subgraph Services["Сервисный слой"]
+        FastAPI["FastAPI REST Backend (52 эндпоинта)"]
+        BotService["Сервис бота Aiogram 3"]
+        Scheduler["Фоновые воркеры и планировщик"]
     end
 
-    subgraph Database["Persistence Layer"]
-        PG[("PostgreSQL 16 Database")]
-        Pool["asyncpg Connection Pool"]
+    subgraph Database["Слой данных"]
+        PG[("База данных PostgreSQL 16")]
+        Pool["Пул соединений asyncpg"]
     end
 
     TgUser --> MiniApp
@@ -184,7 +182,7 @@ flowchart TD
     TgBotClient -->|Telegram API| BotService
 
     Nginx -->|Proxy Pass| FastAPI
-    Nginx -->|Static Hosting| MiniApp
+    Nginx -->|Статика SPA| MiniApp
 
     FastAPI --> Pool
     BotService --> Pool
@@ -195,82 +193,62 @@ flowchart TD
 
 ---
 
-## Technology Stack
+## Стек технологий
 
 ### Frontend
-* **Framework**: [Vue 3](https://vuejs.org/) (Composition API, `<script setup>`)
-* **Language**: [TypeScript 5](https://www.typescriptlang.org/)
-* **Tooling**: [Vite 5](https://vitejs.dev/)
-* **Routing & State**: [Vue Router 4](https://router.vuejs.org/), Custom Reactive Composables with TTL caching
-* **Internationalization**: [vue-i18n 11](https://vue-i18n.intlify.dev/) (EN / RU localization)
-* **Networking**: [Axios](https://axios-http.com/) with request signing and localization interceptors
-* **Telegram Integration**: Telegram WebApp SDK abstraction layer
-* **Component Showcase**: [Storybook 10](https://storybook.js.org/), [Vitest](https://vitest.dev/)
+* **Фреймворк**: [Vue 3](https://vuejs.org/) (Composition API, `<script setup>`)
+* **Язык**: [TypeScript 5](https://www.typescriptlang.org/)
+* **Сборщик**: [Vite 5](https://vitejs.dev/)
+* **Маршрутизация**: [Vue Router 4](https://router.vuejs.org/), кастомные реактивные composables с TTL-кэшированием
+* **Локализация**: [vue-i18n 11](https://vue-i18n.intlify.dev/) (RU / EN)
+* **Сеть**: [Axios](https://axios-http.com/) с интерцепторами подписи и локали
+* **Интеграция с Telegram**: Telegram WebApp SDK
+* **Компонентная среда**: [Storybook 10](https://storybook.js.org/), [Vitest](https://vitest.dev/)
 
 ### Backend
-* **API Framework**: [FastAPI](https://fastapi.tiangolo.com/) (Python 3.11+, ASGI / Uvicorn)
-* **Bot Framework**: [Aiogram 3.18](https://aiogram.dev/) (Telegram Bot Framework)
-* **Database Driver**: [asyncpg](https://github.com/MagicStack/asyncpg) (Asynchronous PostgreSQL client)
-* **Task Automation**: [APScheduler](https://apscheduler.readthedocs.io/) (Automated economic distributions and maintenance)
-* **Analytics**: Pandas, Matplotlib, ReportLab (Automated administrative reports)
-* **Validation**: Pydantic v2
+* **API фреймворк**: [FastAPI](https://fastapi.tiangolo.com/) (Python 3.11+, ASGI / Uvicorn)
+* **Фреймворк бота**: [Aiogram 3.18](https://aiogram.dev/)
+* **Драйвер БД**: [asyncpg](https://github.com/MagicStack/asyncpg) (асинхронный клиент PostgreSQL)
+* **Планировщик задач**: [APScheduler](https://apscheduler.readthedocs.io/)
+* **Аналитика и отчеты**: Pandas, Matplotlib, ReportLab
+* **Валидация**: Pydantic v2
 
-### Database & Operations
-* **Database**: PostgreSQL 16
-* **Concurrency**: Row-level locking (`FOR UPDATE`) for atomic asset trades
-* **Migrations**: Versioned SQL migration runners
-* **Hosting**: Linux Cloud VPS (Nginx + Systemd services)
-
----
-
-## Technical Challenges & Solutions
-
-### 1. Decoupling Bot Interactions into a Responsive Mini App
-* **Challenge**: The original gameplay relied on Telegram chat messages, inline keyboards, and callback queries. This created rate limits, disjointed state, and rigid UX.
-* **Solution**: Designed a decoupled architecture where the existing database and bot service remained operational while a FastAPI REST service and Vue 3 Mini App were built in parallel. Both interfaces operate simultaneously against the same PostgreSQL database.
-
-### 2. Preventing Race Conditions in Concurrent Transactions
-* **Challenge**: Concurrent operations (such as simultaneous attempts to buy the same marketplace listing or rapid card upgrade clicks) risked duplicate grants or double-spending.
-* **Solution**: Enforced PostgreSQL transaction isolation with row-level locks on inventory and balance records within atomic `asyncpg` transactions, ensuring consistent state without table-level lock bottlenecks.
-
-### 3. Telegram WebView Touch & Navigation Quirks
-* **Challenge**: The embedded mobile Telegram WebView has non-standard touch scrolling, pull-to-refresh collisions, and unmounts pages during tab changes.
-* **Solution**: Built a custom navigation stack and component-targeted scroll restoration mechanism that tracks container-specific scroll offsets, delivering a native-feeling mobile experience.
-
-### 4. Coordinated Multilingual Architecture
-* **Challenge**: Synchronizing translation updates between client UI strings and backend notifications without data divergence.
-* **Solution**: Established a unified localization dictionary system with language-tagged request interceptors on Axios and corresponding translation resolvers in FastAPI.
+### База данных и инфраструктура
+* **СУБД**: PostgreSQL 16
+* **Конкурентность**: построчные блокировки (`FOR UPDATE`) для атомарности операций
+* **Миграции**: версионированные SQL-скрипты миграций
+* **Хостинг**: Linux Cloud VPS (Nginx + Systemd сервисы)
 
 ---
 
-## Project Metrics
+## Метрики проекта
 
-* **Database Tables**: 51 tables
-* **API Endpoints**: 52 REST endpoints
-* **Client Routes**: 33 SPA routes
-* **Client Components**: 68 Vue components
-* **Project Files**: 440+ tracked files
-
----
-
-## Technical Debt & Future Improvements
-
-* **Docker-Based Environments**: Introduce Docker Compose configurations for seamless local onboarding and isolated testing environments.
-* **Database Migrations Tooling**: Transition from custom versioned SQL migration runners to Alembic for automated schema diffing and safer rollbacks.
-* **Automated Testing & CI/CD**: Add integration test suites for core financial flows and configure GitHub Actions for automated linting and zero-downtime deployment pipelines.
+* **Таблицы БД**: 51 таблица
+* **REST эндпоинты**: 52 эндпоинта
+* **SPA маршруты**: 33 маршрута
+* **Vue-компоненты**: 68 компонентов
+* **Файлы проекта**: 440+ отслеживаемых файлов
 
 ---
 
-## Project Status
+## Технический долг и планы развития (Roadmap)
 
-* 🟢 **Production Deployed**: Actively operating with daily transactional volume.
-* 👥 **Active Community**: Daily engagement through automated distributions and marketplace trading.
-* 🔄 **Modular Architecture**: Feature-scoped modules (Inventory, Market, Realty) separated for targeted updates.
+* **Контейнеризация**: внедрение Docker Compose для упрощения локального развертывания и изоляции тестовых сред;
+* **Инструменты миграций**: переход с кастомных SQL-скриптов на Alembic для автогенерации схем и безопасных откатов;
+* **Автоматизация тестирования и CI/CD**: расширение интеграционных тестов для критических операций и настройка GitHub Actions.
 
 ---
 
-## License
+## Статус проекта
 
-Copyright (c) 2026 MOneK. All rights reserved.
+* 🟢 **В продакшене**: сервис стабильно работает и обслуживает пользователей;
+* 👥 **Активное сообщество**: регулярная игровая активность и торговля на маркете;
+* 🔄 **Модульная структура**: кодовая база разделена по доменным модулям для удобного добавления новых фичей.
 
-This repository contains documentation, screenshots, and showcase materials only. No permission is granted to copy, modify, distribute, or use any part of this project without explicit written permission.
+---
+
+## Лицензия
+
+Copyright (c) 2026 MOneK. Все права защищены.
+
+Данный репозиторий содержит исключительно демонстрационные материалы, скриншоты и документацию. Копирование, модификация, распространение или использование любой части проекта без прямого письменного разрешения запрещены.
