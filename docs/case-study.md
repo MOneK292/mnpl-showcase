@@ -32,7 +32,7 @@ graph LR
 
 ### High-Concurrency Asset Allocation & Transactions
 * **Problem**: Simultaneous user actions (such as rapid reward claims, card drops, or concurrent balance deductions) risk race conditions, phantom reads, and double-allocation of digital assets.
-* **Solution**: Implemented transactional row-level locks (FOR UPDATE SKIP LOCKED) on balance records and card allocation pools within atomic database transactions, preventing state conflicts without incurring global table-lock penalties.
+* **Solution**: Implemented transactional row-level locks (FOR UPDATE on balance records and FOR UPDATE SKIP LOCKED on card allocation pools) within atomic database transactions, preventing state conflicts without incurring global table-lock penalties.
 
 ### State & Scroll Management in Mobile WebView
 * **Problem**: The embedded Telegram WebView environment does not handle browser history and container-level scroll restoration naturally.

@@ -197,7 +197,7 @@ flowchart TD
 * **Internationalization**: [vue-i18n 11](https://vue-i18n.intlify.dev/) (EN / RU localization)
 * **Networking**: [Axios](https://axios-http.com/) with request signing and localization interceptors
 * **Telegram Integration**: Telegram WebApp SDK abstraction layer
-* **Component Showcase**: [Storybook 10](https://storybook.js.org/), [Vitest](https://vitest.dev/), [Playwright](https://playwright.dev/)
+* **Component Showcase**: [Storybook 10](https://storybook.js.org/), [Vitest](https://vitest.dev/)
 
 ### Backend
 * **API Framework**: [FastAPI](https://fastapi.tiangolo.com/) (Python 3.11+, ASGI / Uvicorn)
