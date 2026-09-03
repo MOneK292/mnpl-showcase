@@ -1,5 +1,7 @@
 ﻿# MNPL — Economic Strategy Telegram Mini App
 
+[English](README.md) | [Русский](README.ru.md)
+
 > **An economic strategy game built as a Telegram Mini App with an asynchronous FastAPI backend, Aiogram bot, and PostgreSQL.**
 
 [![Frontend: Vue 3](https://img.shields.io/badge/Frontend-Vue%203%20%7C%20TypeScript%20%7C%20Vite-4FC08D?logo=vuedotjs)](https://vuejs.org/)
