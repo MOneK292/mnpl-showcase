@@ -24,6 +24,12 @@ MNPL is a production-deployed economic strategy game running inside Telegram via
 
 ---
 
+## Links
+
+- **Telegram Community**: https://t.me/mnplcoin
+- **Telegram Bot**: https://t.me/mnplgamebot
+---
+
 ## Engineering Highlights
 
 - **Built 68 Vue components and 33 SPA routes** from scratch for the Telegram Mini App

@@ -24,6 +24,12 @@ MNPL — это развернутая в продакшене экономич�
 
 ---
 
+## Ссылки
+
+- **Telegram-сообщество**: https://t.me/mnplcoin
+- **Telegram-бот**: https://t.me/mnplgamebot
+---
+
 ## Ключевые инженерные результаты (Highlights)
 
 - **Разработал с нуля 68 Vue-компонентов и 33 SPA-маршрута** для Telegram Mini App
